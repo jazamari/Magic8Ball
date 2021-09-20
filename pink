@@ -1,0 +1,24 @@
+    let answers = ["Yes", "Hmm, Goddess says yes", "I think so...","Si","Probably Shmobably", "Hmm, why not?", "Same", "Tell me more", "Picknicking with my stuffies", "Reply hazy, try again!", "Ask again later", "Out picking flowers", "TMI", "*interpretive dances in no*", "Don't count on it", "My reply is no", "That's not sexxxy"]
+    @IBOutlet weak var shakeButton: UIButton!
+    @IBOutlet weak var answerLabel: UILabel!
+    
+    //... rest of code
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+
+    @IBAction func shakeButtonTapped(_ sender: Any) {
+       //1
+        let randomIndex = Int.random(in: 0..<answers.count)
+        
+        //2
+        answerLabel.text = answers[randomIndex]
+
+    }
+        
+
+
+}
